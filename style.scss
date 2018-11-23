@@ -20,7 +20,7 @@ nav{
   position: fixed;
   width: 100%;
   top:0;
-  background: skyblue;
+  background: black;
   a{
     font-size: 2vw;
     padding: .5vw 2vw;
@@ -28,9 +28,12 @@ nav{
     color: white;
     text-align: center;
     text-decoration: none;
+    text-decoration-color: red;
+    transition: transform 2s;
     &:hover{
       background: white;
       color: skyblue;
+      transform: scale(1.1);
     }
   }
 }

@@ -11,7 +11,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background: skyblue;
+  background: black;
 }
 
 nav a {
@@ -21,9 +21,12 @@ nav a {
   color: white;
   text-align: center;
   text-decoration: none;
+  text-decoration-color: red;
+  transition: transform 2s;
 }
 
 nav a:hover {
   background: white;
   color: skyblue;
+  transform: scale(1.1);
 }

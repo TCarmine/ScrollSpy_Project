@@ -22,11 +22,11 @@ nav a {
   text-align: center;
   text-decoration: none;
   text-decoration-color: red;
-  transition: transform 2s;
+  transition: transform 0.5s;
 }
 
 nav a:hover {
   background: white;
   color: skyblue;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }

@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 // .box{
 //   width: 20vw;
 //   height: 20vw;
@@ -29,11 +28,11 @@ nav{
     text-align: center;
     text-decoration: none;
     text-decoration-color: red;
-    transition: transform 2s;
+    transition: transform 0.5s;
     &:hover{
       background: white;
       color: skyblue;
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 }

@@ -31,17 +31,31 @@ for (let i=0; i < 5; i++){
    headings[i].innerText = citiesContent[i];
    div.appendChild(sections[i]);
 }
+
      let img = document.createElement('IMG');
      img.src='sky.jpg';
      // document.body.appendChild(img);
      document.body.style.backgroundImage = "url('sky.jpg')";
-      window.addEventListener("scroll", function(ev){
+     document.body.style.backgroundSize = 'cover';
+     document.body.style.backgroundAttachment = 'fixed';
+
+     let sectionsDistance = [];
+     for (var i = 0; i < sectionsDistance.length; i++) {
+       sectionsDistance[i].push(sections[i].offsetTop);
+     }
+
+     window.addEventListener("scroll", function(ev){
         // let scrolled = window.pageYOffset;
         // const background =
-        for(let i=1;i<sections.length;i++){
-            if(window.pageYOffset >= sections[i].offsetTop-300){
-              sections[i].classList.add("active");
-            }
+        for(let i=0;i < sections.length;i++){
+            // if(window.pageYOffset >= sections[i].offsetTop-300){
+                if (window.pageYOffset >= sectionsDistance[i]-450 && window.pageYOffset < sectionsDistance[i]+150){
+                     sections[i].classList.add("active");
+                     arrayAElements[i].style.background = 'red';
+                } else {
+                     sections[i].classList.remove('active');
+                     arrayAElements[i].style.background = 'skyblue';
+                }
          }
       })
 

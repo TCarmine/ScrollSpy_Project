@@ -23,7 +23,7 @@ nav{
   width: 100%;
   top:0;
   background: black;
-  z-index: 2;
+  z-index: 1;
 
   a{
     font-size: 2vw;
@@ -57,13 +57,14 @@ div{
            text-align: center;
            opacity: 0;
            transition: opacity 0.5s;
+           z-index: 2;
            &:nth-of-type(even){
              align-self: flex-end;
              margin:5vw;
            }
-           &:first-of-type{
-             opacity: 1;
-           }
+           // &:first-of-type{
+           //   opacity: 1;
+           // }
            h1{
              padding:2vw;
              text-transform: uppercase;

@@ -41,7 +41,7 @@ div {
 
 div section {
   display: block;
-  width: 70%;
+  width: 40%;
   height: 30vw;
   margin: 5vw 5;
   border: 1px solid green;
@@ -60,4 +60,12 @@ div section h1 {
   border: 2px solid red;
   width: 50%;
   margin: 1vw auto;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+div section h1:hover {
+  background: white;
+  color: black;
+  opacity: 1;
 }

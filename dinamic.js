@@ -15,6 +15,7 @@ let sections = [];
 let headings = [];
 
 
+
 for (let i=0; i < 5; i++){
    arrayAElements.push(document.createElement('a'));
    nav.appendChild(arrayAElements[i]);
@@ -30,6 +31,23 @@ for (let i=0; i < 5; i++){
    headings[i].innerText = citiesContent[i];
    div.appendChild(sections[i]);
 }
+     let img = document.createElement('IMG');
+     img.src='sky.jpg';
+     // document.body.appendChild(img);
+     document.body.style.backgroundImage = "url('sky.jpg')";
+      window.addEventListener("scroll", function(ev){
+        // let scrolled = window.pageYOffset;
+        // const background =
+        for(let i=1;i<sections.length;i++){
+            if(window.pageYOffset >= sections[i].offsetTop-300){
+              sections[i].classList.add("active");
+            }
+         }
+      })
+
 
    document.body.appendChild(nav);
    document.body.appendChild(div);
+
+
+   // would work also document.body.addEventListener

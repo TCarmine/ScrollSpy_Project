@@ -32,6 +32,9 @@ for (let i=0; i < 5; i++){
    div.appendChild(sections[i]);
 }
 
+document.body.appendChild(nav);
+document.body.appendChild(div);
+
      let img = document.createElement('IMG');
      img.src='sky.jpg';
      // document.body.appendChild(img);
@@ -39,9 +42,11 @@ for (let i=0; i < 5; i++){
      document.body.style.backgroundSize = 'cover';
      document.body.style.backgroundAttachment = 'fixed';
 
+
+
      let sectionsDistance = [];
-     for (var i = 0; i < sectionsDistance.length; i++) {
-       sectionsDistance[i].push(sections[i].offsetTop);
+     for (let i = 0; i < sections.length; i++) {
+       sectionsDistance.push(sections[i].offsetTop);
      }
 
      window.addEventListener("scroll", function(ev){
@@ -49,7 +54,7 @@ for (let i=0; i < 5; i++){
         // const background =
         for(let i=0;i < sections.length;i++){
             // if(window.pageYOffset >= sections[i].offsetTop-300){
-                if (window.pageYOffset >= sectionsDistance[i]-450 && window.pageYOffset < sectionsDistance[i]+150){
+                if (window.pageYOffset >= sectionsDistance[i]-250 && window.pageYOffset < sectionsDistance[i]+150){
                      sections[i].classList.add("active");
                      arrayAElements[i].style.background = 'red';
                 } else {
@@ -60,8 +65,7 @@ for (let i=0; i < 5; i++){
       })
 
 
-   document.body.appendChild(nav);
-   document.body.appendChild(div);
+
 
 
    // would work also document.body.addEventListener

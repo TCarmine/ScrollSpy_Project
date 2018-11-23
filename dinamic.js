@@ -11,17 +11,17 @@ let aHome = document.createElement('a');
 // let elCities = [aHamburg, aRom, aBarcellona, aNewYork, aMoskow];
 
 let arrayAElements = [];
-for(n=0; n<5;n++){
-  arrayAElements.push(document.createElement('a'));
-}
+// for(n=0; n<5;n++){
+//
+// }
 
 let cities =['Hamburg','Rome','Barcellona','New York','Moscow'];
 
-for (let i=0; i< arrayAElements.length; i++){
+for (let i=0; i< 5; i++){
+   arrayAElements.push(document.createElement('a'));
    nav.appendChild(arrayAElements[i]);
    arrayAElements[i].innerHTML = cities[i];
 }
-
 
 //nav.appendChild(aGroup);
 

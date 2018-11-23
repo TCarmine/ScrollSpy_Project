@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// .box{
+//   width: 20vw;
+//   height: 20vw;
+//   background: red;
+//   margin: 3vw auto;
+//   padding: 1vw;
+//   border: 1px solid green;
+// }
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
+  position: fixed;
+  width: 100%;
+  top:0;
+  background: skyblue;
+  a{
+    font-size: 2vw;
+    padding: .5vw 2vw;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    &:hover{
+      background: white;
+      color: skyblue;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: skyblue;
+}
+
+nav a {
+  font-size: 2vw;
+  padding: .5vw 2vw;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: white;
+  color: skyblue;
+}

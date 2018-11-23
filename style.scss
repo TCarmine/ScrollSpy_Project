@@ -32,7 +32,36 @@ nav{
     &:hover{
       background: white;
       color: skyblue;
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
+}
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 2vw 2vw;
+
+      section{
+           display: block;
+           width: 70%;
+           height: 30vw;
+           margin:5vw 5;
+           border: 1px solid green;
+           text-align: center;
+
+           &:nth-of-type(even){
+             align-self: flex-end;
+             margin:5vw;
+           }
+           h1{
+             padding:2vw;
+             text-transform: uppercase;
+             text-align: center;
+             border : 2px solid red;
+             width: 50%;
+             margin:1vw auto;
+           }
+      }
 }

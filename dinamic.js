@@ -1,6 +1,6 @@
 let nav = document.createElement('nav');
+let div = document.createElement('div');
 let citiesContent =['Hamburg','Rome','Barcellona','New York','Moscow'];
-let sectionContent =['Hamburg','Rome','Barcellona','New York','Moscow'];
 
 // let aHamburg = document.createElement('a');
 // let aRom = document.createElement('a');
@@ -17,16 +17,19 @@ let headings = [];
 
 for (let i=0; i < 5; i++){
    arrayAElements.push(document.createElement('a'));
-   sections.push(document.createElement('SECTION'));
-   headings.push(document.createElement('H1'));
-   arrayAElements[i].innerHTML = citiesContent[i];
-   sections[i].appendChild(headings[i]);
    nav.appendChild(arrayAElements[i]);
-   document.body.appendChild(sections[i]);
+   arrayAElements[i].innerHTML = citiesContent[i];
 
+   sections.push(document.createElement('SECTION'));
+   document.body.appendChild(sections[i]);
+   sections[i].style.background = `url(${[i+1]}.jpg)`;
+   sections[i].style.backgroundSize = 'cover';
+
+   headings.push(document.createElement('H1'));
+   sections[i].appendChild(headings[i]);
+   headings[i].innerText = citiesContent[i];
+   div.appendChild(sections[i]);
 }
 
-
-
-
-document.body.appendChild(nav);
+   document.body.appendChild(nav);
+   document.body.appendChild(div);

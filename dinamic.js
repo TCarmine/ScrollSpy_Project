@@ -1,6 +1,6 @@
 let nav = document.createElement('nav');
 let div = document.createElement('div');
-let citiesContent =['Hamburg','Rome','Barcellona','New York','Moscow'];
+let citiesContent =['Hamburg','Rome','Barcelona','New York','Moscow'];
 
 // let aHamburg = document.createElement('a');
 // let aRom = document.createElement('a');
@@ -20,16 +20,27 @@ for (let i=0; i < 5; i++){
    arrayAElements.push(document.createElement('a'));
    nav.appendChild(arrayAElements[i]);
    arrayAElements[i].innerHTML = citiesContent[i];
+   arrayAElements[i].setAttribute('href',`#${i}`);
+
 
    sections.push(document.createElement('SECTION'));
    document.body.appendChild(sections[i]);
    sections[i].style.background = `url(${[i+1]}.jpg)`;
+   // sections[i].setAttribute('id',`${i}`);
    sections[i].style.backgroundSize = 'cover';
+   // create dinamically an id for each section
+   sections[i].id = `${i}`;
 
    headings.push(document.createElement('H1'));
    sections[i].appendChild(headings[i]);
    headings[i].innerText = citiesContent[i];
    div.appendChild(sections[i]);
+
+   // let changeLink = (e) => {
+   //    arrayAElements[i].
+   // }
+   //
+   // arrayAElements.addEventListener('click', changeLink);
 }
 
 document.body.appendChild(nav);
@@ -63,6 +74,29 @@ document.body.appendChild(div);
                 }
          }
       })
+
+window.addEventListener('click', function(ev) {
+
+      for (let i = 0; i < sections.length; i++) {
+
+        // if (window.pageYOffset >= posters[i].offsetTop - heightToExecute && window.pageYOffset < posters[i+1].offsetTop - heightToExecute) {
+          for (let j = 0; j < arrayAElements.length; j++) {
+
+               sections[i].classList.add("active");
+               arrayAElements[i].style.background = 'red';
+               break;
+            // if (titles[j].classList.contains('changeColor')) {
+            //   titles[j].classList.remove('changeColor');
+            //   break;
+            // }
+          }
+          titles[i].classList.add('changeColor');
+          posters[i].style.opacity = '1';
+        }
+
+
+
+})
 
 
 
